@@ -1,0 +1,74 @@
+.centrado {
+    text-align: center;
+    padding-top: 120px;
+  }
+  .btn.btn-primary.btn-lg.btn-block.largo {
+    width: 100%;
+    background-color: #EF4D36;
+  }
+  .theme-white .card.card-primary {
+    border-top: 2px solid #EF4D36 !important;
+  }
+  .btn.btn-primary.btn-lg.btn-block.largo:hover {
+    background-color: black !important;	
+  }
+  .form-group > label {
+    font-size: 14px !important;
+  }
+  .form-group .control-label {
+    font-size: 14px !important;
+  }
+  .text-small {
+    font-size: 14px !important;
+    line-height: 20px;
+  }
+  a.text-small {
+   color: #EF4D36;
+  }
+  a.text-small:hover {
+    color: black !important;
+   }
+   body {
+    background-color: #f4f4f4;
+    font-size: 14px;
+    font-weight: 400;
+    color: #6c757d;
+  }
+  .acceso {
+    font-weight: bold;
+  }
+  .color1 {
+    font-size: 8px !important;
+    color: blue;
+    padding: 2px;
+    line-height: 0px;
+  }
+  .color2 {
+    font-size: 8px !important;
+    color: green;
+    padding: 2px;
+    line-height: 0px;
+  }
+  .color3 {
+    font-size: 8px !important;
+    color: red;
+    padding: 2px;
+    line-height: 0px;
+  }
+  .material-icons.dos {
+    font-size: 22px;
+    border: 1px solid;
+  padding: 5px;
+  }
+  .menu-toggle.nav-link.has-dropdown.fondo {
+    background-color: #f7f7f7;
+  }
+  a.btn.btn-primary.btn1 {
+    padding-top: 6px;
+    padding-bottom: 6px;
+    display: inline-flex;
+}
+i.material-icons.tres {
+  font-size: 19px;
+  padding: 3px;
+}
