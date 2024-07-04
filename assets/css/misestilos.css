@@ -72,3 +72,9 @@ i.material-icons.tres {
   font-size: 19px;
   padding: 3px;
 }
+.crmtitulo {
+  padding-top: 8px !important;
+  font-size: 18px !important;
+  font-weight: bold !important;
+  color: red !important;
+}

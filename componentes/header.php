@@ -1,3 +1,14 @@
+<?php
+session_start();
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
+// Verificar si el usuario ha iniciado sesión
+if (!isset($_SESSION['user']) || empty($_SESSION['user'])) {
+    header("Location: index.php");
+    exit();
+}
+?>
 <!DOCTYPE html>
 <html lang="es">
 
@@ -32,14 +43,7 @@
                 <i data-feather="maximize"></i>
               </a></li>
             <li>
-              <form class="form-inline me-auto">
-                <div class="search-element d-flex">
-                  <input class="form-control" type="search" placeholder="Buscar" aria-label="Search">
-                  <button class="btn" type="submit">
-                    <i class="fas fa-search"></i>
-                  </button>
-                </div>
-              </form>
+              <div class="crmtitulo">PADD DE ADMINISTRACIÓN</div>
             </li>
           </ul>
         </div>
