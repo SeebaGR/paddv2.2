@@ -1,5 +1,5 @@
 <?php
-session_start();
+//session_start();
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $url = "https://baserow-production-9ab6.up.railway.app/api/database/rows/table/566/";

@@ -1,13 +1,13 @@
 <?php
-session_start();
+/*session_start();
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
 // Verificar si el usuario ha iniciado sesión
-if (!isset($_SESSION['user']) || empty($_SESSION['user'])) {
+//if (!isset($_SESSION['user']) || empty($_SESSION['user'])) {
     header("Location: index.php");
     exit();
-}
+}*/
 ?>
 <!DOCTYPE html>
 <html lang="es">
