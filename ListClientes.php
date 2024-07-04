@@ -45,7 +45,7 @@ include 'componentes/sidebar.php';
                       <table class="table table-striped" id="table-1">
                         <thead>
                           <tr>
-                            <th>#</th>
+                            <th>ID</th>
                             <th>Nombre Cliente</th>
                             <th>Nombre de Fantasia</th>
                             <th>Grupo</th>

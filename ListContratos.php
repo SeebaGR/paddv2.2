@@ -40,7 +40,7 @@ include 'componentes/sidebar.php';
                         <thead>
                           <tr>
                             <th class="text-center">
-                              #
+                              ID
                             </th>
                             <th>Nombre Contrato</th>
                             <th>Nombre Cliente</th>
