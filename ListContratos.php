@@ -1,5 +1,28 @@
 <?php
-include 'querys/qcontratos.php';    
+
+
+$curl = curl_init();
+
+curl_setopt_array($curl, array(
+  CURLOPT_URL => 'https://baserow-production-9ab6.up.railway.app/api/database/rows/table/549/',
+  CURLOPT_RETURNTRANSFER => true,
+  CURLOPT_ENCODING => '',
+  CURLOPT_MAXREDIRS => 10,
+  CURLOPT_TIMEOUT => 0,
+  CURLOPT_FOLLOWLOCATION => true,
+  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+  CURLOPT_CUSTOMREQUEST => 'GET',
+  CURLOPT_HTTPHEADER => array(
+    'Authorization: Token nHPciD53K9SI883sLftNOUPQuaSWKNB0'
+  ),
+));
+
+$response = curl_exec($curl);
+
+curl_close($curl);
+
+// Decodificar la respuesta JSON
+$data = json_decode($response, true);   
 include 'componentes/header.php';
 include 'componentes/sidebar.php';
 ?>
@@ -31,19 +54,7 @@ include 'componentes/sidebar.php';
                           </tr>
                         </thead>
                         <tbody>
-                          <tr>
-                            <td>
-                            <?php echo "$id";?>
-                            </td>
-                            <td><?php echo "$nombreContrato";?></td>
-                            <td><?php echo "$nombreCliente";?></td>
-                            <td><?php echo "$nombreProducto";?></td>
-                            <td><?php echo "$nombreProveedor";?></td>
-                            <td><?php echo "$medios";?></td>
-                            <td><?php echo "$formaPago";?></td>
-                         
-                            <td><a href="#" class="btn btn-primary">Detail</a></td>
-                          </tr>
+                        <?php include 'querys/qcontratos.php'; ?>
          
                         </tbody>
                       </table>

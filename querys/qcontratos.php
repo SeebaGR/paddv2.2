@@ -1,34 +1,10 @@
 <?php
-
-$curl = curl_init();
-
-curl_setopt_array($curl, array(
-  CURLOPT_URL => 'https://baserow-production-9ab6.up.railway.app/api/database/rows/table/549/',
-  CURLOPT_RETURNTRANSFER => true,
-  CURLOPT_ENCODING => '',
-  CURLOPT_MAXREDIRS => 10,
-  CURLOPT_TIMEOUT => 0,
-  CURLOPT_FOLLOWLOCATION => true,
-  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-  CURLOPT_CUSTOMREQUEST => 'GET',
-  CURLOPT_HTTPHEADER => array(
-    'Authorization: Token nHPciD53K9SI883sLftNOUPQuaSWKNB0'
-  ),
-));
-
-$response = curl_exec($curl);
-
-curl_close($curl);
-
-// Decodificar la respuesta JSON
-$data = json_decode($response, true);
- // Mostrar los resultados
- if(isset($data['results']) && is_array($data['results'])){
-    foreach($data['results'] as $contrato){
-      $id = htmlspecialchars($contrato['id']);
-      $nombreContrato = htmlspecialchars($contrato['field_5217'] ?? 'N/A');
-      $nombreCliente = "N/A";
-      if(isset($contrato['field_5220']) && is_array($contrato['field_5220'])) {
+    if(isset($data['results']) && is_array($data['results'])){
+        foreach($data['results'] as $contrato){
+          $id = htmlspecialchars($contrato['id']);
+          $nombreContrato = htmlspecialchars($contrato['field_5217'] ?? 'N/A');
+          $nombreCliente = "N/A";
+        if(isset($contrato['field_5220']) && is_array($contrato['field_5220'])) {
         foreach($contrato['field_5220'] as $item) {
           if(isset($item['value'])) {
             $nombreCliente = htmlspecialchars($item['value']);
@@ -72,6 +48,27 @@ $data = json_decode($response, true);
           }
         }
       }
+          
+    ?>
+   <tr>
+    <td>
+    <?php echo "$id";?>
+    </td>
+    <td><?php echo "$nombreContrato";?></td>
+    <td><?php echo "$nombreCliente";?></td>
+    <td><?php echo "$nombreProducto";?></td>
+    <td><?php echo "$nombreProveedor";?></td>
+    <td><?php echo "$medios";?></td>
+    <td><?php echo "$formaPago";?></td>
+  
+    <td><a href="#" class="btn btn-primary">Detail</a></td>
+</tr>
+    <?php
+        }
+    } else {
+        echo "<tr><td colspan='9'>No se encontraron clientes</td></tr>";
     }
-}
-?>
+    ?>
+
+
+
