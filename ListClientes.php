@@ -1,14 +1,4 @@
 <?php
-session_start();
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
-
-// Verificar si el usuario ha iniciado sesión
-if (!isset($_SESSION['user']) || empty($_SESSION['user'])) {
-    header("Location: index.php");
-    exit();
-}
-
 $curl = curl_init();
 curl_setopt_array($curl, array(
   CURLOPT_URL => 'https://baserow-production-9ab6.up.railway.app/api/database/rows/table/164/',
